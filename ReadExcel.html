@@ -14,13 +14,13 @@
 <body>
     <div ng-controller="MyController">
         <form enctype="multipart/form-data">
-
-            <h4>Choose Excel file to display here : </h4>
-            <input type="file" id="file">
-            <button type="submit" value='submit' ng-click="uploadExcel()">Show Content</button>
-
-            <div class="container"></div>
-
+			<table border =0>
+				<tr>
+					<td>Choose Excel file : <input type="file" id="file"> </td>
+					<td> <button type="submit" value='submit' ng-click="uploadExcel()">Show Content</button> </td>
+				</tr>
+			</table>	
+		<div class="container"></div>
         </form>
     </div>
 </body>
