@@ -1,0 +1,28 @@
+<html ng-app="myApp">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.7.7/xlsx.core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xls/0.7.4-a/xls.core.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+    <style type="text/css">
+    }
+    </style>
+</head>
+
+<body>
+    <div ng-controller="MyController">
+        <form enctype="multipart/form-data">
+
+            <h4>Choose Excel file to display here : </h4>
+            <input type="file" id="file">
+            <button type="submit" value='submit' ng-click="uploadExcel()">Show Content</button>
+
+            <div class="container"></div>
+
+        </form>
+    </div>
+</body>
+
+</html>
