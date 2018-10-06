@@ -28,8 +28,8 @@
     <div ng-controller="MyController">
         <form enctype="multipart/form-data">
             <div class="inputContainer">
-                <input type="file" id="file" multiple="multiple"  onchange="angular.element(this).scope().uploadExcel()">
-				<!--<button type="submit" value='submit' ng-click="uploadExcel()">Show Content</button>-->
+                <input type="file" id="file" multiple="multiple"  >
+				<button type="submit" value='submit' ng-click="getExcel()">Show Content</button>
             </div>    
 		<div class="container"></div>
         </form>

@@ -3,10 +3,24 @@
  app.controller('MyController', ['$scope', myController]);
 
  function myController($scope) {
-
-  $scope.uploadExcel = function() {
-   var myFile = document.getElementById('file');
-   var input = myFile;
+	 
+	 
+	   $scope.getExcel = function() {
+		   
+		   var myFile = document.getElementById('file');
+		   
+		   console.log(myFile.files.length);
+		   for(k=0; k<myFile.files.length; k++ ){
+		   $scope.uploadExcel(myFile.files[k]);
+		   }
+		   
+		   $(".inputContainer").hide();
+		   
+	   };
+	
+  $scope.uploadExcel = function(input) {
+		  
+     
    var reader = new FileReader();
 
    //console.log(input.files[0]);
@@ -22,7 +36,7 @@
      excelJsonObj = rowObject;
 
      
-	var fileName = input.files[0].name.split('.')[0];
+	var fileName = input.name.split('.')[0];
 	 
 	for (var i = 0; i < excelJsonObj.length; i++) {
 		var data = excelJsonObj[i];
@@ -52,11 +66,14 @@
 	
    };
     
-	console.log("Total Files"+ input.files.length);
 	
    //for(var j=0; j < input.files.length; j++){
-	reader.readAsBinaryString(input.files[0]);
+	reader.readAsBinaryString(input);
    //}
+   
   };
- }
+  
+  
+  }
+ 
 })();
